@@ -10,9 +10,9 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center cursor-pointer group h-16">
-              <img
-                src="/public/images/yolo.png"
-                alt="YOLO Logo"
+              <img 
+                src="https://storage.googleapis.com/static.claudevideo.com/static/user_uploaded/logo_yolo.png" 
+                alt="YOLO Logo" 
                 className="h-full w-auto object-contain transform group-hover:scale-105 transition-transform"
               />
             </div>

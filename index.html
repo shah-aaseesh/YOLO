@@ -30,7 +30,7 @@
         .bg-yolo-green { background-color: var(--yolo-green); }
         .text-yolo-orange { color: var(--yolo-orange); }
         .text-yolo-teal { color: var(--yolo-teal); }
-
+        
         .btn-yolo-primary {
             background-color: var(--yolo-orange);
             color: white;
@@ -42,7 +42,15 @@
             box-shadow: 0 10px 15px -3px rgba(244, 166, 34, 0.3);
         }
     </style>
-    <script type="module" src="/index.tsx"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
 </head>
 <body class="bg-gray-50 text-gray-900">
     <div id="root"></div>

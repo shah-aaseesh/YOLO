@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import StatsSection from './components/StatsSection';
 import AboutSection from './components/AboutSection';
 import DestinationGrid from './components/DestinationGrid';
 import Footer from './components/Footer';
@@ -9,9 +10,9 @@ import { BLOGS } from './constants';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Top Bar - Rebranded */}
-      <div className="bg-[#0b2b2e] text-white py-2.5 hidden md:block">
+      <div className="bg-[#0b2b2e] text-white py-2.5 hidden md:block border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-[10px] font-black uppercase tracking-[0.2em]">
           <div className="flex space-x-6 text-gray-400">
             <span>Verified Operator: <span className="text-[#f58220]">YOLO-NEPAL-2025</span></span>
@@ -31,49 +32,11 @@ const App: React.FC = () => {
       
       <Hero />
 
+      <StatsSection />
+
       <AboutSection />
 
       <DestinationGrid />
-
-      {/* Fixed Departure Section - Rebranded */}
-      <section className="py-20 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">
-              YOLO <span className="text-[#00a1ab]">Upcoming</span> Trips
-            </h2>
-            <div className="w-20 h-2 bg-[#f58220] mx-auto rounded-full mb-16"></div>
-            
-            <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
-              <table className="min-w-full text-left bg-gray-50 rounded-[2rem] overflow-hidden">
-                <thead>
-                  <tr className="border-b-2 border-white text-[10px] md:text-xs font-black uppercase text-gray-400 tracking-[0.3em]">
-                    <th className="p-8 min-w-[200px]">Adventure</th>
-                    <th className="p-8 min-w-[150px]">Dates</th>
-                    <th className="p-8 text-right">Status</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-white">
-                  <tr className="group hover:bg-white transition-all cursor-pointer">
-                    <td className="p-8 font-black text-gray-900 text-base md:text-lg">
-                      <div className="flex items-center">
-                        <span className="w-3 h-3 bg-[#f58220] rounded-full mr-4 group-hover:scale-150 transition-transform"></span>
-                        Kanchenjunga Multi-Peak Trek
-                      </div>
-                    </td>
-                    <td className="p-8 text-gray-500 font-bold text-xs md:text-sm">AUG 20 — SEP 02</td>
-                    <td className="p-8 text-right">
-                      <button className="bg-[#00a1ab] text-white px-8 py-3 rounded-full font-black text-[10px] hover:bg-[#f58220] transition-all uppercase tracking-widest shadow-lg shadow-teal-500/10">
-                        Join Group
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Featured Packages (Mosaic) - Rebranded */}
       <section className="bg-gray-900 py-20 md:py-32">

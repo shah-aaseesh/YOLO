@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
           
           <div className="text-center sm:text-left">
             <div className="flex items-center justify-center sm:justify-start mb-8 h-20">
-              <img
-                src="/public/images/yolo.png"
-                alt="YOLO"
+              <img 
+                src="https://storage.googleapis.com/static.claudevideo.com/static/user_uploaded/logo_yolo.png" 
+                alt="YOLO" 
                 className="h-full w-auto object-contain brightness-110"
               />
             </div>

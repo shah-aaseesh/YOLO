@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO | You Only Live Once - Tours & Treks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        /* YOLO Brand Colors */
+        :root {
+            --yolo-red: #E95541;
+            --yolo-orange: #F4A622;
+            --yolo-green: #7EC343;
+            --yolo-teal: #00A1AB;
+            --yolo-dark: #0b2b2e;
+        }
+        .yolo-gradient-text {
+            background: linear-gradient(to right, var(--yolo-orange), var(--yolo-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-yolo-orange { background-color: var(--yolo-orange); }
+        .bg-yolo-teal { background-color: var(--yolo-teal); }
+        .bg-yolo-red { background-color: var(--yolo-red); }
+        .bg-yolo-green { background-color: var(--yolo-green); }
+        .text-yolo-orange { color: var(--yolo-orange); }
+        .text-yolo-teal { color: var(--yolo-teal); }
+        
+        .btn-yolo-primary {
+            background-color: var(--yolo-orange);
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-yolo-primary:hover {
+            background-color: #d8911a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(244, 166, 34, 0.3);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <div id="root"></div>
+</body>
+</html>

@@ -20,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome, onNavigateAbout, onNavi
               className="flex-shrink-0 flex items-center cursor-pointer group h-16 md:h-20"
             >
               <img
-                src="https://storage.googleapis.com/static.claudevideo.com/static/user_uploaded/logo_yolo.png"
+                src="/images/Yolo.png"
                 alt="YOLO Logo"
                 className="h-full w-auto object-contain transform group-hover:scale-105 transition-transform"
               />

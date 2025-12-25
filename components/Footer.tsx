@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div className="space-y-8">
             <div className="h-16 flex items-center">
               <img
-                src="https://storage.googleapis.com/static.claudevideo.com/static/user_uploaded/logo_yolo.png"
+                src="/images/Yolo.png"
                 alt="YOLO"
                 className="h-full w-auto brightness-110"
               />

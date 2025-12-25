@@ -1,29 +1,56 @@
 
 import React, { useState } from 'react';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onNavigateHome: () => void;
+  onNavigateAbout: () => void;
+  onNavigatePackages: () => void;
+  currentView: 'home' | 'about' | 'packages' | 'package';
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onNavigateHome, onNavigateAbout, onNavigatePackages, currentView }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="bg-white border-b sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-20 md:h-24">
           <div className="flex items-center">
-            <div className="flex-shrink-0 flex items-center cursor-pointer group">
-              <div className="text-2xl font-black text-[#00A1AB]">YOLO</div>
+            <div 
+              onClick={onNavigateHome}
+              className="flex-shrink-0 flex items-center cursor-pointer group h-16 md:h-20"
+            >
+              <img 
+                src="https://storage.googleapis.com/static.claudevideo.com/static/user_uploaded/logo_yolo.png" 
+                alt="YOLO Logo" 
+                className="h-full w-auto object-contain transform group-hover:scale-105 transition-transform"
+              />
             </div>
           </div>
           
           <div className="hidden lg:ml-6 lg:flex lg:space-x-4 xl:space-x-8 items-center">
-            <a href="#" className="text-gray-700 hover:text-[#F4A622] px-2 py-2 text-sm font-bold transition-colors">Trekking <span className="text-[10px] text-gray-400">▼</span></a>
-            <a href="#" className="text-gray-700 hover:text-[#F4A622] px-2 py-2 text-sm font-bold transition-colors">Tour <span className="text-[10px] text-gray-400">▼</span></a>
-            <a href="#" className="text-gray-700 hover:text-[#F4A622] px-2 py-2 text-sm font-bold transition-colors whitespace-nowrap">Expeditions <span className="text-[10px] text-gray-400">▼</span></a>
-            <a href="#" className="text-gray-700 hover:text-[#F4A622] px-2 py-2 text-sm font-bold transition-colors">About Us</a>
-            <a href="#" className="text-gray-700 hover:text-[#F4A622] px-2 py-2 text-sm font-bold transition-colors">Blogs</a>
-            <a href="#" className="text-gray-700 hover:text-[#F4A622] px-2 py-2 text-sm font-bold transition-colors">Contact</a>
+            <button 
+              onClick={onNavigateHome}
+              className={`${currentView === 'home' ? 'text-[#F4A622]' : 'text-gray-700'} hover:text-[#F4A622] px-3 py-2 text-[14px] font-bold transition-colors uppercase tracking-wide`}
+            >
+              Home
+            </button>
+            <button 
+              onClick={onNavigateAbout}
+              className={`${currentView === 'about' ? 'text-[#F4A622]' : 'text-gray-700'} hover:text-[#F4A622] px-3 py-2 text-[14px] font-bold transition-colors uppercase tracking-wide`}
+            >
+              About Us
+            </button>
+            <button 
+              onClick={onNavigatePackages}
+              className={`${currentView === 'packages' ? 'text-[#F4A622]' : 'text-gray-700'} hover:text-[#F4A622] px-3 py-2 text-[14px] font-bold transition-colors uppercase tracking-wide`}
+            >
+              Packages
+            </button>
+            <button className="text-gray-700 hover:text-[#F4A622] px-3 py-2 text-[14px] font-bold transition-colors uppercase tracking-wide">Contact Us</button>
             
-            <button className="ml-4 bg-[#F4A622] text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider hover:bg-[#d8911a] transition-all shadow-md hover:shadow-orange-500/20">
-               Book Trip
+            <button className="ml-4 border-2 border-[#00A1AB] text-[#00A1AB] px-6 py-2.5 rounded-full text-[12px] font-black uppercase tracking-widest hover:bg-[#00A1AB] hover:text-white transition-all">
+               Enquire
             </button>
           </div>
 
@@ -41,16 +68,29 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div className={`${isOpen ? 'block' : 'hidden'} lg:hidden bg-white border-t`}>
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <a href="#" className="block px-3 py-4 rounded-md text-base font-black text-[#F4A622] bg-orange-50">Trekking</a>
-          <a href="#" className="block px-3 py-4 rounded-md text-base font-bold text-gray-600 hover:text-[#00A1AB] hover:bg-gray-50">Tour</a>
-          <a href="#" className="block px-3 py-4 rounded-md text-base font-bold text-gray-600 hover:text-[#00A1AB] hover:bg-gray-50">Expedition</a>
-          <a href="#" className="block px-3 py-4 rounded-md text-base font-bold text-gray-600 hover:text-[#00A1AB] hover:bg-gray-50">About Us</a>
-          <a href="#" className="block px-3 py-4 rounded-md text-base font-bold text-gray-600 hover:text-[#00A1AB] hover:bg-gray-50">Blogs</a>
-          <a href="#" className="block px-3 py-4 rounded-md text-base font-bold text-gray-600 hover:text-[#00A1AB] hover:bg-gray-50">Contact</a>
-          <div className="p-3">
-             <button className="w-full bg-[#00A1AB] text-white py-4 rounded-2xl font-black uppercase tracking-widest shadow-lg">
-                Book Your Adventure
+        <div className="px-4 pt-4 pb-6 space-y-2">
+          <button 
+            onClick={() => { onNavigateHome(); setIsOpen(false); }}
+            className={`w-full text-left block px-4 py-4 rounded-xl text-lg font-black ${currentView === 'home' ? 'text-[#F4A622] bg-orange-50' : 'text-gray-600'}`}
+          >
+            Home
+          </button>
+          <button 
+            onClick={() => { onNavigateAbout(); setIsOpen(false); }}
+            className={`w-full text-left block px-4 py-4 rounded-xl text-lg font-bold ${currentView === 'about' ? 'text-[#00A1AB] bg-teal-50' : 'text-gray-600'}`}
+          >
+            About Us
+          </button>
+          <button 
+            onClick={() => { onNavigatePackages(); setIsOpen(false); }}
+            className={`w-full text-left block px-4 py-4 rounded-xl text-lg font-bold ${currentView === 'packages' ? 'text-[#00A1AB] bg-teal-50' : 'text-gray-600'}`}
+          >
+            Packages
+          </button>
+          <a href="#" className="block px-4 py-4 rounded-xl text-lg font-bold text-gray-600 hover:text-[#00A1AB] hover:bg-gray-50">Contact Us</a>
+          <div className="p-4">
+             <button className="w-full bg-[#00A1AB] text-white py-4 rounded-2xl font-black uppercase tracking-widest text-[12px] shadow-lg">
+                Send Enquiry
              </button>
           </div>
         </div>

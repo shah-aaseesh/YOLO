@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -6,30 +5,30 @@ const Footer: React.FC = () => {
     <footer className="bg-[#0b2b2e] text-white pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
-          
+
           <div className="space-y-8">
             <div className="h-16 flex items-center">
-              <img 
-                src="https://storage.googleapis.com/static.claudevideo.com/static/user_uploaded/logo_yolo.png" 
-                alt="YOLO" 
+              <img
+                src="https://storage.googleapis.com/static.claudevideo.com/static/user_uploaded/logo_yolo.png"
+                alt="YOLO"
                 className="h-full w-auto brightness-110"
               />
             </div>
-            <p className="text-gray-400 text-[14px] leading-relaxed font-medium">
+            <p className="text-gray-400 text-sm leading-relaxed font-medium">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
             </p>
             <div className="flex space-x-4">
-               {[1,2,3,4].map(i => (
-                 <div key={i} className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#f58220] transition-colors flex items-center justify-center cursor-pointer border border-white/5">
-                   <span className="text-white text-xs">●</span>
-                 </div>
-               ))}
+              {[1, 2, 3, 4].map(i => (
+                <div key={i} className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#f58220] transition-colors flex items-center justify-center cursor-pointer border border-white/5">
+                  <span className="text-white text-xs">●</span>
+                </div>
+              ))}
             </div>
           </div>
 
           <div>
             <h4 className="text-[#f58220] font-black text-xl uppercase tracking-widest mb-10">Quick Links</h4>
-            <ul className="space-y-5 text-gray-300 font-bold text-[14px]">
+            <ul className="space-y-5 text-gray-300 font-bold text-sm">
               <li><a href="#" className="hover:text-[#F4A622] transition-colors">Home</a></li>
               <li><a href="#" className="hover:text-[#F4A622] transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-[#F4A622] transition-colors">Destination</a></li>
@@ -39,7 +38,7 @@ const Footer: React.FC = () => {
 
           <div>
             <h4 className="text-[#f58220] font-black text-xl uppercase tracking-widest mb-10">Other Pages</h4>
-            <ul className="space-y-5 text-gray-300 font-bold text-[14px]">
+            <ul className="space-y-5 text-gray-300 font-bold text-sm">
               <li><a href="#" className="hover:text-[#F4A622] transition-colors">Privacy & Policy</a></li>
               <li><a href="#" className="hover:text-[#F4A622] transition-colors">Terms of Use</a></li>
               <li><a href="#" className="hover:text-[#F4A622] transition-colors">Disclaimer</a></li>
@@ -49,10 +48,10 @@ const Footer: React.FC = () => {
 
           <div>
             <h4 className="text-[#f58220] font-black text-xl uppercase tracking-widest mb-10">Contact Info</h4>
-            <ul className="space-y-6 text-[14px] font-bold">
+            <ul className="space-y-6 text-sm font-bold">
               <li className="flex items-start text-gray-300">
                 <span className="text-[#f58220] mr-4 mt-1">📍</span>
-                <span>Jl. Niti Mandala, Renon, <br/> Bali 80225</span>
+                <span>Jl. Niti Mandala, Renon, <br /> Bali 80225</span>
               </li>
               <li className="flex items-center text-gray-300">
                 <span className="text-[#f58220] mr-4">📞</span>
@@ -65,7 +64,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-500 font-bold uppercase tracking-widest gap-6">
           <p>Travel & Tour Agency Template Kit by Jegtheme</p>
           <p>Copyright © 2024. All rights reserved.</p>

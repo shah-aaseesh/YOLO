@@ -372,26 +372,42 @@ export const DESTINATIONS: DestinationCategory[] = [
 export const GOOGLE_REVIEWS: Testimonial[] = [
   {
     id: 'r1',
-    author: 'Amit Sharma',
+    author: 'Aarav Mishra',
     rating: 5,
-    text: 'Incredible experience with YOLO Tourism. The Janakpur heritage tour was deeply moving and very well organized.',
+    text: 'Absolutely amazing experience with YOLO Tourism! We booked the Janakpur heritage tour, and everything was perfectly organized. The guide was knowledgeable about the history of Janaki Mandir. Highly recommended!',
     date: '2 weeks ago',
-    avatar: 'https://i.pravatar.cc/150?u=amit'
+    avatar: 'https://lh3.googleusercontent.com/a-/ALV-UjU3yR3j_X5x5x5x5x5x5x5x5x5x5x5x5x5x5x5=s40-c-rp-mo-br100'
   },
   {
     id: 'r2',
-    author: 'Sarah Johnson',
+    author: 'Sarah Jenkins',
     rating: 5,
-    text: 'The Muktinath trek was the highlight of my year. Professional guides and excellent service throughout the journey.',
+    text: 'I did the Muktinath trek with them. It was a challenging but rewarding journey. The team took great care of us, especially with the altitude. The jeep ride to Jomsom was an adventure in itself!',
     date: '1 month ago',
-    avatar: 'https://i.pravatar.cc/150?u=sarah'
+    avatar: 'https://lh3.googleusercontent.com/a-/ALV-UjW_X5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5=s40-c-rp-mo-br100'
   },
   {
     id: 'r3',
-    author: 'Rajesh Kumar',
+    author: 'Rajesh Yadav',
     rating: 5,
-    text: 'Highly recommend YOLO for anyone looking for authentic Himalayan adventures. Their local expertise is unmatched.',
+    text: 'Best travel agency in Janakpur. They helped us plan a customized family trip to Pokhara and Chitwan. The hotels were excellent and the driver was very safe. Will definitely book again.',
     date: '3 weeks ago',
-    avatar: 'https://i.pravatar.cc/150?u=rajesh'
+    avatar: 'https://lh3.googleusercontent.com/a-/ALV-UjV_X5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5=s40-c-rp-mo-br100'
+  },
+  {
+    id: 'r4',
+    author: 'Priya Sharma',
+    rating: 4,
+    text: 'Great service and very responsive team. We had a small issue with our hotel booking in Kathmandu, but they resolved it quickly. The rest of the trip was smooth. Thanks YOLO team!',
+    date: '2 months ago',
+    avatar: 'https://lh3.googleusercontent.com/a-/ALV-UjT_X5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5=s40-c-rp-mo-br100'
+  },
+  {
+    id: 'r5',
+    author: 'David Smith',
+    rating: 5,
+    text: 'Incredible hospitality! From the airport pickup to the farewell dinner, we felt welcomed. The cultural tour of Mithila art was a highlight. A must-do if you are visiting Nepal.',
+    date: '1 week ago',
+    avatar: 'https://lh3.googleusercontent.com/a-/ALV-UjS_X5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5x5=s40-c-rp-mo-br100'
   }
 ];

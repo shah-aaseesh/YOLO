@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -65,13 +64,13 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      <Navbar 
-        onNavigateHome={navigateToHome} 
-        onNavigateAbout={navigateToAbout} 
+      <Navbar
+        onNavigateHome={navigateToHome}
+        onNavigateAbout={navigateToAbout}
         onNavigatePackages={navigateToPackages}
-        currentView={view} 
+        currentView={view}
       />
-      
+
       {view === 'home' && (
         <>
           <Hero />
@@ -79,15 +78,15 @@ const App: React.FC = () => {
             <StatsSection />
           </div>
           <AboutSection />
-          
-          <DestinationGrid 
-            onPackageSelect={handlePackageClick} 
+
+          <DestinationGrid
+            onPackageSelect={handlePackageClick}
             customPackages={homePackages}
             titleOverride="Adventure Experiences"
           />
-          
+
           <div className="bg-[#F8FAFB] pb-32 text-center">
-            <button 
+            <button
               onClick={navigateToPackages}
               className="inline-flex items-center bg-[#00A1AB] text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-[12px] shadow-2xl shadow-teal-500/20 hover:bg-[#F4A622] transition-all group active:scale-95"
             >
@@ -99,7 +98,7 @@ const App: React.FC = () => {
           {/* YOLO RENTALS SECTION - Updated to match Reference Image Style */}
           <section className="py-24 md:py-36 bg-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              
+
               {/* Header inspired by 'Real Reviews' Image */}
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
                 <div className="text-left relative">
@@ -116,9 +115,9 @@ const App: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <h2 className="text-4xl md:text-6xl font-black text-[#0b2b2e] tracking-tighter leading-[1.1] uppercase">
-                    Drive Your <br/>
+                    Drive Your <br />
                     <span className="text-[#f58220]">YOLO Freedom</span>
                   </h2>
                 </div>
@@ -135,17 +134,17 @@ const App: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                 <div className="lg:col-span-8 bg-[#2998bd] rounded-[3.5rem] p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center gap-12 shadow-2xl">
                   <div className="w-full md:w-1/2 relative z-10 flex justify-center">
-                    <img 
-                      src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800" 
-                      alt="SUV" 
+                    <img
+                      src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800"
+                      alt="SUV"
                       className="w-full h-auto object-contain drop-shadow-2xl animate-float"
                     />
                   </div>
                   <div className="w-full md:w-1/2 text-white relative z-10">
                     <h3 className="text-4xl md:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
-                      Explore Any <br/>Terrain Today
+                      Explore Any <br />Terrain Today
                     </h3>
-                    <p className="text-white/70 font-medium mb-10 text-lg leading-relaxed">
+                    <p className="text-white/80 font-medium mb-10 text-base leading-relaxed max-w-md">
                       Simply rent and ride wherever the road takes you. We provide 24/7 road assistance for every mile.
                     </p>
                     <div className="grid grid-cols-2 gap-6 mb-10">
@@ -158,7 +157,7 @@ const App: React.FC = () => {
                         <p className="text-[11px] font-black uppercase tracking-widest opacity-80">Districts</p>
                       </div>
                     </div>
-                    <button className="bg-white text-[#0b2b2e] px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-[11px] hover:bg-[#fcc12d] transition-all shadow-2xl">
+                    <button className="bg-white text-[#0b2b2e] px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-[#fcc12d] transition-all shadow-2xl">
                       Get a Quote
                     </button>
                   </div>
@@ -169,16 +168,16 @@ const App: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
                   <div className="absolute inset-0 p-16 flex flex-col justify-between">
                     <h4 className="text-5xl font-black leading-none text-white tracking-tighter uppercase">
-                      VEHICLE<br/><span className="text-[#9bd4e4]">RENTAL</span>
+                      VEHICLE<br /><span className="text-[#9bd4e4]">RENTAL</span>
                     </h4>
                     <div className="flex justify-center">
-                       <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border-2 border-white/20 hover:bg-[#9bd4e4] hover:text-[#0b2b2e] transition-all group/play cursor-pointer">
-                          <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-current border-b-[10px] border-b-transparent ml-2"></div>
-                       </div>
+                      <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border-2 border-white/20 hover:bg-[#9bd4e4] hover:text-[#0b2b2e] transition-all group/play cursor-pointer">
+                        <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-current border-b-[10px] border-b-transparent ml-2"></div>
+                      </div>
                     </div>
                     <div className="flex justify-between items-center text-white/50">
-                       <span className="text-[12px] font-black uppercase tracking-[0.3em]">Trusted Service</span>
-                       <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg>
+                      <span className="text-[12px] font-black uppercase tracking-[0.3em]">Trusted Service</span>
+                      <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg>
                     </div>
                   </div>
                 </div>
@@ -195,11 +194,11 @@ const App: React.FC = () => {
           <div className="bg-[#0b2b2e] py-32 md:py-48 flex items-center justify-center">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <span className="text-white/50 text-[12px] md:text-[14px] font-black uppercase tracking-[0.5em] mb-6 block">Adventure is calling</span>
-              <h1 className="text-4xl md:text-8xl font-black text-white tracking-tighter uppercase leading-none">Explore <br/><span className="text-[#f58220]">All Tours</span></h1>
+              <h1 className="text-4xl md:text-8xl font-black text-white tracking-tighter uppercase leading-none">Explore <br /><span className="text-[#f58220]">All Tours</span></h1>
             </div>
           </div>
           <div className="bg-[#F8FAFB]">
-             <DestinationGrid onPackageSelect={handlePackageClick} hideCountries={true} showFilters={true} />
+            <DestinationGrid onPackageSelect={handlePackageClick} hideCountries={true} showFilters={true} />
           </div>
         </>
       )}
@@ -207,9 +206,9 @@ const App: React.FC = () => {
       {view === 'about' && <AboutPage />}
 
       {view === 'package' && selectedPackage && (
-        <PackageDetail 
-          pkg={selectedPackage} 
-          onBack={navigateToHome} 
+        <PackageDetail
+          pkg={selectedPackage}
+          onBack={navigateToHome}
           onPackageSelect={handlePackageClick}
         />
       )}

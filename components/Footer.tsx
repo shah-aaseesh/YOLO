@@ -1,4 +1,5 @@
 import React from 'react';
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -15,12 +16,12 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-medium">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+              Experience the best of Nepal with YOLO Tourism. From the historic temples of Janakpur to the majestic Himalayas, we create unforgettable journeys tailored just for you.
             </p>
             <div className="flex space-x-4">
-              {[1, 2, 3, 4].map(i => (
-                <div key={i} className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#f58220] transition-colors flex items-center justify-center cursor-pointer border border-white/5">
-                  <span className="text-white text-xs">●</span>
+              {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (
+                <div key={i} className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#f58220] transition-colors flex items-center justify-center cursor-pointer border border-white/5 group">
+                  <Icon className="w-4 h-4 text-white group-hover:text-white transition-colors" />
                 </div>
               ))}
             </div>
@@ -50,24 +51,24 @@ const Footer: React.FC = () => {
             <h4 className="text-[#f58220] font-black text-xl uppercase tracking-widest mb-10">Contact Info</h4>
             <ul className="space-y-6 text-sm font-bold">
               <li className="flex items-start text-gray-300">
-                <span className="text-[#f58220] mr-4 mt-1">📍</span>
-                <span>Jl. Niti Mandala, Renon, <br /> Bali 80225</span>
+                <MapPin className="w-5 h-5 text-[#f58220] mr-4 mt-1 shrink-0" />
+                <span>Kadam Chowk, Janakpur,<br /> Nepal</span>
               </li>
               <li className="flex items-center text-gray-300">
-                <span className="text-[#f58220] mr-4">📞</span>
-                <span>+123-456-789</span>
+                <Phone className="w-5 h-5 text-[#f58220] mr-4 shrink-0" />
+                <span>+977 980-1234567</span>
               </li>
               <li className="flex items-center text-gray-300">
-                <span className="text-[#f58220] mr-4">📧</span>
-                <span>contact@domain.com</span>
+                <Mail className="w-5 h-5 text-[#f58220] mr-4 shrink-0" />
+                <span>info@yolotourism.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-500 font-bold uppercase tracking-widest gap-6">
-          <p>Travel & Tour Agency Template Kit by Jegtheme</p>
-          <p>Copyright © 2024. All rights reserved.</p>
+          <p>YOLO Tourism © 2024. All rights reserved.</p>
+          <p>Designed for Travelers</p>
         </div>
       </div>
     </footer>

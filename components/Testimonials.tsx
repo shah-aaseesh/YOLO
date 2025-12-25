@@ -2,13 +2,6 @@ import React from 'react';
 import { GOOGLE_REVIEWS } from '../constants';
 
 const Testimonials: React.FC = () => {
-  // Using the map link derived from the user's iframe or a standard maps link for the button
-  const businessUri = 'https://maps.app.goo.gl/D8z6z'; // Placeholder or use the embed URL if preferred, but a direct link is better for a button. 
-  // Actually, let's use the embed URL as requested or a cleaner link if possible. 
-  // The user provided an embed code. I'll use a generic search link or the one from the embed if I can parse it, 
-  // but for now I will keep the existing logic or update it to a direct map link if I can find one.
-  // The previous file had: 'https://www.google.com/maps/place/YOLO+TOURISM/@26.7282928,85.9298352,17z/...'
-  // I will stick with a working link.
   const mapLink = "https://www.google.com/maps/place/YOLO+TOURISM/@26.728288,85.9324101,17z/data=!3m1!4b1!4m6!3m5!1s0x242420d8e5c78465:0x3aa18db45345a0a0!8m2!3d26.728288!4d85.9324101!16s%2Fg%2F11f4mrvv6n";
 
   return (
